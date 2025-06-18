@@ -1,0 +1,37 @@
+@{
+    ViewData["Title"] = "Processo de Serragem";
+}
+
+<h1>Processo de Serragem</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="ProcessarSerragem" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            <div class="form-group mb-3">
+                <label for="blocoId" class="control-label">Bloco</label>
+                <select name="blocoId" class="form-control" asp-items="ViewBag.BlocoId"></select>
+            </div>
+            
+            <div class="form-group mb-3">
+                <label for="espessura" class="control-label">Espessura da Chapa (cm)</label>
+                <input name="espessura" type="number" step="0.1" class="form-control" required />
+            </div>
+            
+            <div class="form-group mb-3">
+                <label for="quantidade" class="control-label">Quantidade de Chapas</label>
+                <input name="quantidade" type="number" class="form-control" required />
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" value="Processar Serragem" class="btn btn-primary" />
+                <a asp-controller="Home" asp-action="Index" class="btn btn-secondary">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+} 

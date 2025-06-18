@@ -1,0 +1,38 @@
+# Arquivos de compilação
+bin/
+obj/
+
+# Arquivos de configuração
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Arquivos de log
+*.log
+
+# Arquivos de banco de dados
+*.mdf
+*.ldf
+*.ndf
+
+# Arquivos de ambiente
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Arquivos de IDE
+.vs/
+.vscode/
+*.swp
+*.swo
+
+# Arquivos de dependências
+node_modules/
+packages/
+
+# Arquivos de cache
+.cache/
+.nuget/ 

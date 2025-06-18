@@ -1,0 +1,37 @@
+@model SistemaMarmoreGranito.Models.Chapa
+
+@{
+    ViewData["Title"] = "Excluir Chapa";
+}
+
+<h1>Excluir Chapa</h1>
+
+<h3>Tem certeza que deseja excluir esta chapa?</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">Bloco</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.Bloco.Codigo)</dd>
+
+        <dt class="col-sm-3">@Html.DisplayNameFor(model => model.TipoMaterial)</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.TipoMaterial)</dd>
+
+        <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Largura)</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.Largura)</dd>
+
+        <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Altura)</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.Altura)</dd>
+
+        <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Espessura)</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.Espessura)</dd>
+
+        <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Valor)</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.Valor)</dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Excluir" class="btn btn-danger" />
+        <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+    </form>
+</div> 

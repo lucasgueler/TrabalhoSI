@@ -1,0 +1,42 @@
+@model IEnumerable<SistemaMarmoreGranito.Models.Chapa>
+
+@{
+    ViewData["Title"] = "Chapas";
+}
+
+<h1>Chapas</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Nova Chapa</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Bloco</th>
+            <th>@Html.DisplayNameFor(model => model.TipoMaterial)</th>
+            <th>@Html.DisplayNameFor(model => model.Largura)</th>
+            <th>@Html.DisplayNameFor(model => model.Altura)</th>
+            <th>@Html.DisplayNameFor(model => model.Espessura)</th>
+            <th>@Html.DisplayNameFor(model => model.Valor)</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Bloco.Codigo)</td>
+                <td>@Html.DisplayFor(modelItem => item.TipoMaterial)</td>
+                <td>@Html.DisplayFor(modelItem => item.Largura)</td>
+                <td>@Html.DisplayFor(modelItem => item.Altura)</td>
+                <td>@Html.DisplayFor(modelItem => item.Espessura)</td>
+                <td>@Html.DisplayFor(modelItem => item.Valor)</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">Editar</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table> 

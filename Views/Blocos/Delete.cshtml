@@ -1,0 +1,37 @@
+@model SistemaMarmoreGranito.Models.Bloco
+
+@{
+    ViewData["Title"] = "Excluir Bloco";
+}
+
+<h1>Excluir Bloco</h1>
+
+<h3>Tem certeza que deseja excluir este bloco?</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Codigo)</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.Codigo)</dd>
+
+        <dt class="col-sm-3">@Html.DisplayNameFor(model => model.PedreiraOrigem)</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.PedreiraOrigem)</dd>
+
+        <dt class="col-sm-3">@Html.DisplayNameFor(model => model.MetragemM3)</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.MetragemM3)</dd>
+
+        <dt class="col-sm-3">@Html.DisplayNameFor(model => model.TipoMaterial)</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.TipoMaterial)</dd>
+
+        <dt class="col-sm-3">@Html.DisplayNameFor(model => model.ValorCompra)</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.ValorCompra)</dd>
+
+        <dt class="col-sm-3">@Html.DisplayNameFor(model => model.NumeroNotaFiscal)</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.NumeroNotaFiscal)</dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Excluir" class="btn btn-danger" />
+        <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+    </form>
+</div> 
